@@ -12,7 +12,7 @@ class HardwareStore:
     #git add name file 
     #git commit -m "I add new function future"
     #git push 
-    def trading():
+    def trading(self):
         shopping_list = []
         item = True
         for item in range ():
@@ -20,3 +20,11 @@ class HardwareStore:
             shopping_list.append(product)
         for item in shopping_list:
             print("Список продуктов:", item) 
+
+    def filtration(self):
+        categories_keywords = {
+            "Электроника": ["Дрель", "Шуруповёрт", "Лампочка", "Провод", "Розетка"],
+            "Садовые вещи": ["Лопата", "Веник", "Тяпка", "Вила", "Грабли"],
+        }
+
+        
