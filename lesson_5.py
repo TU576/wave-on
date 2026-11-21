@@ -23,8 +23,8 @@ class HardwareStore:
             "Ведро": {"price": 200, "quantity": 20}
         }
 
-    def show_invventory(self):
-        print("Все товары в магазине",  {self.name})
+    def show_inventory(self):
+        print("Все товары в магазине", self.inventory)
 
 
         
@@ -50,8 +50,6 @@ class HardwareStore:
         } 
 
     def web(self):
-        store = HardwareStore("Хозмаркет")
-        store.web()
         while True:
             print("Меню магазина")
             print("1 - Показать все товары")
@@ -62,16 +60,17 @@ class HardwareStore:
             choice = input("Введите цифру: ")
 
             if choice == "1":
-                self.show_invventory
+                self.show_inventory()
             elif choice == "2":
-                self.filtration
+                self.filtration()
             elif choice == "3":
-                self.trading
+                self.trading()
             elif choice == "0":
                 print("Вы вышли из магазина")
                 break
             else:
                 print("Введите только цифру 0, 1, 2, 3")
 
-
+store = HardwareStore("Хозмаркет")
+store.web()
         
