@@ -51,6 +51,7 @@ class HardwareStore:
 
     def web(self):
         store = HardwareStore("Хозмаркет")
+        store.web()
         while True:
             print("Меню магазина")
             print("1 - Показать все товары")
@@ -61,11 +62,11 @@ class HardwareStore:
             choice = input("Введите цифру: ")
 
             if choice == "1":
-                store.show_invventory
+                self.show_invventory
             elif choice == "2":
-                store.filtration
+                self.filtration
             elif choice == "3":
-                store.trading
+                self.trading
             elif choice == "0":
                 print("Вы вышли из магазина")
                 break
