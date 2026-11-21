@@ -8,9 +8,17 @@ class User:
     login_list = []
     password_list =[]
 
+    def save_password(password):
+        with open("password.txt","r") as pasw:
+            if password in pasw.read():
+                print("такой пароль уже есть")
+        with open("password.txt","a") as pasw:
+            pasw.write("\n" + str(password))
+    
     def set_password(self, password):
         User.password_list.append(password)
         self.password = password
+        User.save_password(password)
 
     def check_password(self, password):
         return self.password == password
